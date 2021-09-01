@@ -14,7 +14,7 @@ main:
 	rst 28h
 	.dw bRunIndicOff
 	ld bc,$020D
-	ld hl,boohoo
+	ld hl,spriteData
 	call lcdDrawTile
 	rst 28h
 	.dw bGetKey
@@ -91,5 +91,5 @@ ldtEnd:
 	pop af
 	ret
 
-boohoo:
+spriteData:
 .db $18,$24,$5A,$5A,$5A,$5A,$24,$18
